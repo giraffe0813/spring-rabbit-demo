@@ -11,11 +11,10 @@ public class MessageConsumerService implements MessageListener{
 	
 	@Autowired
 	private AmqpTemplate amqpTemplate;
-	
-	@Override
+
+
 	public void onMessage(Message message) {
 		System.out.println("接收到消息：" + new String(message.getBody()));
-		
-	}
 
+	}
 }
